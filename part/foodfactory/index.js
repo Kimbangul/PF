@@ -134,13 +134,6 @@ floatingMenu.click(floatingMenuClickEvent);
 
 
 
-// var elementPosition = {
-//   mainImg : $('#main-img').offset().top,
-//   onecupOneday : $('#onecup_oneday').offset().top,
-//   news : $('#news').offset().top,
-//   partner : $('#partner').offset().top
-// };
-
 var elementPosition = [ $('#main-img').offset().top, $('#onecup_oneday').offset().top, $('#news').offset().top, $('#partner').offset().top, $('footer').offset().top
 ];
 
@@ -148,37 +141,22 @@ var elementPosition = [ $('#main-img').offset().top, $('#onecup_oneday').offset(
 console.log(elementPosition[2]);
 
 
-
-var lastScrollTop = 0;
-var scrollStep = 0;
-var scroll = $(window).scrollTop();
 var windowHeight = $(window).height();
 
-$(window).scroll(scrollEvent);
+var position = $(window).scrollTop(); 
 
-function scrollEvent(){
-  
-if (scroll > lastScrollTop){
-  $("html, body").animate({scrollTop: elementPosition[scrollStep + 1]}, 500);
-  scrollStep++;
-} else {
+// should start at 0
 
-    $("html, body").animate({scrollTop: elementPosition[scrollStep - 1]}, 500);    
-    if (scrollStep <= 0){
-      scrollStep = 0;    
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if(scroll > position) {
+        console.log('scrollDown');
+       
+    } else {
+         console.log('scrollUp');         
     }
-    else{
-      scrollStep--;
-    }
-
-  // upscroll code
-
-}
-lastScrollTop = scroll;
-console.log(scrollStep);
-}
-
-
+    position = scroll;
+});
 
 
 
