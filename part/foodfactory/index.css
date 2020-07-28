@@ -1038,10 +1038,20 @@ margin: 0 7px;
 
 footer .slider-3 {
 max-height: 35px;
+max-width: 540px;
 height: 100%;
+overflow: hidden;
 }
 
-footer .slider-3 .slick-track{
+footer .slider-3 li.slick-slide a{    
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 35px;
+    transition: font-size 0.5s;
+    }
+
+/* footer .slider-3 .slick-track{
 max-width: 540px;
 width: 100% !important;
 height: 100%;
@@ -1060,18 +1070,11 @@ position: absolute !important;
 pointer-events: none;
 }
 
-footer .slider-3 li.slick-slide a{
-max-height: 35px;
-text-overflow: ellipsis;
-overflow: hidden;
-white-space: nowrap;
-line-height: 35px;
-transition: font-size 0.5s;
-}
+
 
 footer .slider-3 li.slick-slide.slick-active{
 pointer-events: auto;
-}
+} */
 
 /* 플로팅 */
 
