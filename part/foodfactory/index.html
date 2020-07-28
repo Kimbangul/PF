@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>푸드팩토리 모작</title>
+
+<!-- 폰트 로드 -->
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- 제이쿼리 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- debounce  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+<!-- 슬릭 슬라이더 -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+<!-- css -->
+<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+<!-- 헤더 -->
+<header class="flex flex-ai-c flex-jc-a ">
+<div class="logo flex-1-0-0 height-100p flex">
+    <a class="flex flex-ai-c" href="#">
+    <img src="http://food-factory.kr/images/common/hd_logo.png" alt="logo">
+    <img src="http://food-factory.kr/images/common/hd_logo_on.png" alt="logo-hover">
+
+    </a>
+</div>
+<nav class="menu flex  height-100p">
+    <!--  pc gnb    -->
+    <div class="gnb-pc flex">
+    <ul class="height-100p flex flex-1-0-0 flex-ai-c flex-jc-c">
+        <li><a href="#">회사소개</a>
+        <ul class="submenu">
+            <li><a href="#">인사말</a></li>
+            <li><a href="#">연혁</a></li>
+            <li><a href="#">CI소개</a></li>
+            <li><a href="#">인증서</a></li>
+            <li><a href="#">주요거래처</a></li>
+            <li><a href="#">오시는 길</a></li>
+        </ul>
+
+        </li>
+        <li><a href="#">제조공정</a>
+        <ul class="submenu">
+            <li><a href="#">원물관리</a></li>
+            <li><a href="#">제조관리</a></li>
+        </ul>
+
+        </li>
+        <li><a href="#">제품소개</a>
+        <ul class="submenu">
+            <li><a href="#">소용량 컵과일</a></li>
+            <li><a href="#">중용량 컵과일</a></li>
+            <li><a href="#">대용량 컵과일</a></li>
+            <li><a href="#">과일요거 컵과일</a></li>
+        </ul>
+        </li>
+        <li><a href="#">고객지원</a>
+        <ul class="submenu">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">언론보도</a></li>
+            <li><a href="#">고객문의</a></li>
+
+        </ul>
+        </li>
+        <li><a href="#">초등돌봄사업</a>
+        <ul class="submenu">
+            <li><a href="#">교육자료</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">주문ERP</a></li>
+
+        </ul>
+
+        </li>
+        <li><a href="#">How! 컵과일</a>
+        <ul class="submenu">
+            <li><a href="#">How! 컵과일</a></li>
+
+        </ul>
+        </li>
+    </ul>
+    </div>
+    <!--  모바일 gnb  -->
+    <div class="gnb-mb">
+    <ul>
+        <li><a href="#">회사소개</a>
+        <ul class="submenu">
+            <li><a href="#">인사말</a></li>
+            <li><a href="#">연혁</a></li>
+            <li><a href="#">CI소개</a></li>
+            <li><a href="#">인증서</a></li>
+            <li><a href="#">주요거래처</a></li>
+            <li><a href="#">오시는 길</a></li>
+        </ul>
+
+        </li>
+        <li><a href="#">제조공정</a>
+        <ul class="submenu">
+            <li><a href="#">원물관리</a></li>
+            <li><a href="#">제조관리</a></li>
+        </ul>
+
+        </li>
+        <li><a href="#">제품소개</a>
+        <ul class="submenu">
+            <li><a href="#">소용량 컵과일</a></li>
+            <li><a href="#">중용량 컵과일</a></li>
+            <li><a href="#">대용량 컵과일</a></li>
+            <li><a href="#">과일요거 컵과일</a></li>
+        </ul>
+        </li>
+        <li><a href="#">고객지원</a>
+        <ul class="submenu">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">언론보도</a></li>
+            <li><a href="#">고객문의</a></li>
+
+        </ul>
+        </li>
+        <li><a href="#">초등돌봄사업</a>
+        <ul class="submenu">
+            <li><a href="#">교육자료</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">주문ERP</a></li>
+
+        </ul>
+
+        </li>
+        <li><a href="#">How! 컵과일</a>
+        <ul class="submenu">
+            <li><a href="#">How! 컵과일</a></li>
+
+        </ul>
+        </li>
+    </ul>
+    </div>
+
+</nav>
+
+<div class="gnb-pc contact flex flex-1-0-0 flex-ai-c flex-jc-e height-100p">
+    <a href="#">제품문의하기</a>
+</div>
+
+<div class="header_open_bg">
+
+</div>
+
+<div class="gnb-mb gnb-mb-btn flex">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</header>
+
+<!-- 콘텐츠 -->
+<section id="contents">
+<!-- 메인 이미지  -->
+<div id="main-img" class="main-img">
+
+    <ul class="slider-1">
+    <li>
+        <div class="main-img-dot-wrap">
+
+        </div>
+        <div class="text-wrap">
+        <img src="http://food-factory.kr/images/main/main_vis_icon.png" alt="">
+        <div class="text-body">사랑하는 가족과 함께<br>
+            신선한 컵과일 즐기자!
+        </div>
+        </div>
+        <img src="http://food-factory.kr/images/main/main_vis_08.jpg" alt="">
+    </li>
+    <li>
+        <div class="main-img-dot-wrap">
+
+        </div>
+        <div class="text-wrap">
+        <img src="http://food-factory.kr/images/main/main_vis_icon.png" alt="">
+        <div class="text-body">맛있는 과일<br>
+            간편하고 안전하게 먹자!
+        </div>
+        </div>
+        <img src="http://food-factory.kr/images/main/main_vis_05.png" alt="">
+    </li>
+    <li>
+        <div class="main-img-dot-wrap">
+
+        </div>
+        <div class="text-wrap">
+        <img src="http://food-factory.kr/images/main/main_vis_icon.png" alt="">
+        <div class="text-body">안전한 컵과일<br>
+            집에서도 즐기자!
+        </div>
+        </div><img src="http://food-factory.kr/images/main/main_vis_09.jpg" alt="">
+    </li>
+    <li>
+        <div class="main-img-dot-wrap">
+
+        </div>
+        <div class="text-wrap">
+        <img src="http://food-factory.kr/images/main/main_vis_icon.png" alt="">
+        <div class="text-body">HACCP 인증!<br>
+            푸드팩토리는 안전합니다.
+        </div>
+        </div>
+        <img src="http://food-factory.kr/images/main/main_vis_04.png" alt="">
+    </li>
+    <li>
+        <div class="main-img-dot-wrap">
+
+        </div>
+        <div class="text-wrap">
+        <img src="http://food-factory.kr/images/main/main_vis_icon.png" alt="">
+        <div class="text-body">5가지 원물 mix!<br>
+            건강하다! 다양하다!
+        </div>
+        </div>
+        <img src="http://food-factory.kr/images/main/main_vis_06.png" alt="">
+    </li>
+    <li>
+        <div class="main-img-dot-wrap">
+
+        </div>
+        <div class="text-wrap">
+        <img src="http://food-factory.kr/images/main/main_vis_icon.png" alt="">
+        <div class="text-body">자체보유기술로<br>
+            더 신선하게 즐기자!
+        </div>
+        </div>
+        <img src="http://food-factory.kr/images/main/main_vis_07.png" alt="">
+    </li>
+    <li>
+        <div class="main-img-dot-wrap">
+
+        </div>
+        <div class="text-wrap">
+        <img src="http://food-factory.kr/images/main/main_vis_icon.png" alt="">
+        <div class="text-body">다양한 브랜드에서<br>
+            푸드팩토리 컵과일 만나자!
+        </div>
+        </div>
+        <img src="http://food-factory.kr/images/main/main_vis_03.png" alt="">
+    </li>
+    </ul>
+    <div class="scrolldown_icon">
+    <img src="http://food-factory.kr/images/main/main_vis_mouse.png" alt="scrolldownicon">
+    </div>
+
+</div>
+<!-- 원컵 원데이   -->
+<div id="onecup_oneday" class="onecup_oneday">
+    <div class="title_wrap">
+
+    <div class="title">1 CUP 1 DAY<span> : 하루 한컵</span></div>
+    <div class="con ex">
+        하루 한 컵, 내 몸의 영양소를 챙겨주는 푸드팩토리! <br>
+        가족을 생각하는 마음으로 깨끗하게, 신선하게 여러분의 영양소를 책임집니다.
+    </div>
+    </div>
+
+    <div class="img_box_wrap flex flex-jc-a">
+    <div class="img_box">
+        <div class="img_title">한컵으로 <br class="pc"> 영양 小
+        <br>
+        <span>작은컵</span>
+        </div>
+        <a href="#">
+        <div class="img"></div>
+
+        </a>
+
+    </div>
+
+    <div class="img_box">
+        <div class="img_title">한컵에 담은<br class="pc"> 영양 충전 中
+        <br>
+        <span>중간컵</span>
+        </div>
+        <a href="#">
+        <div class="img"></div>
+        </a>
+    </div>
+
+    <div class="img_box">
+        <div class="img_title">한컵에 영양 <br class="pc"> 듬뿍 담았 大
+        <br>
+        <span>큰컵</span>
+        </div>
+        <a href="#">
+        <div class="img"></div>
+
+        </a>
+    </div>
+
+    <div class="img_box">
+        <div class="img_title">하루 한컵 <br class="pc"> 과일요거
+        <br>
+        <span>과일요거</span>
+        </div>
+        <a href="#">
+        <div class="img"></div>
+
+        </a>
+    </div>
+    </div>
+</div>
+<!-- 뉴스  -->
+<div id="news" class="news">
+    <div class="news_bg">
+
+    </div>
+    <div class="title_wrap">
+
+    <div class="title">NEWS<span> : 새로운 소식</span></div>
+    <div class="con ex">
+        푸드팩토리의 새로운 소식들을 확인해주세요. <br>
+        푸드팩토리는 높은 신선도 유지가 가능한 기술을 확보하고 있습니다.
+    </div>
+    </div>
+    <div class="con news_wrap flex slider-2">
+
+    <div class="news_box">
+        <a href="#">
+        <div class="img">
+            <img src="http://food-factory.kr/pg/data/editor/2003/thumb-375301a6554f3319b31c5e516e3679ed_1584688258_47_350x240.jpg" alt="news">
+        </div>
+        <div class="text">
+            <div class="news_title">[푸드팩토리] 코로나19 컵과일 …</div>
+            <div class="news_body">1. 영남대학교병원 500개2. 대구..</div>
+            <span>MORE ></span>
+        </div>
+
+        </a>
+
+    </div>
+    <div class="news_box">
+        <a href="#">
+        <div class="img">
+            <img src="http://img.youtube.com/vi/ZvOhWWstZrE/mqdefault.jpg" alt="news">
+        </div>
+        <div class="text">
+            <div class="news_title">[현대HCN 인터뷰21회 푸드팩토리…</div>
+            <div class="news_body">현대HCN 인터뷰21회 푸드팩토리 김..</div>
+            <span>MORE ></span>
+        </div>
+
+        </a>
+
+    </div>
+    <div class="news_box">
+        <a href="#">
+        <div class="img">
+            <img src="http://img.youtube.com/vi/mqfTr3Q8DoY/mqdefault.jpg" alt="news">
+        </div>
+        <div class="text">
+            <div class="news_title">SBS CNBC 생생경제 정보톡톡…</div>
+            <div class="news_body">SBS CNBC 생생경제 정보톡톡 2..</div>
+            <span>MORE ></span>
+        </div>
+
+        </a>
+
+    </div>
+    <div class="news_box">
+        <a href="#">
+        <div class="img">
+            <img src="http://food-factory.kr/pg/data/editor/2002/thumb-3dd099e054c8f0a9462f2cc3f053b074_1580796307_17_350x240.jpg" alt="news">
+        </div>
+        <div class="text">
+            <div class="news_title">"김천시 2020년 02월 이달의…</div>
+            <div class="news_body">김천시 2020년 02월 이달의 기..</div>
+            <span>MORE ></span>
+        </div>
+
+        </a>
+
+    </div>
+
+    </div>
+</div>
+
+<!-- 파트너   -->
+<div id="partner" class="partner">
+    <div class="con img_wrap flex">
+
+    <div class="img">
+
+        <a class="flex flex-jc-c flex-ai-c" href="#"><img src="http://food-factory.kr/images/main/sec03_img_00.png" alt=""></a></div>
+    <div class="img">
+
+        <a class="flex flex-jc-c flex-ai-c" href="#"><img src="http://food-factory.kr/images/main/sec03_img_01.png" alt=""></a></div>
+    <div class="img_title">
+        <div class="img_title_body">
+        푸드팩토리 <br> 신선도를 위한 <br> process
+        </div>
+
+    </div>
+    <div class="img_title">
+        <div class="img_title_body">
+        푸드팩토리 <br> 학생 최우선 운영 <br> 4WAY SYSTEM
+        </div>
+
+    </div>
+    </div>
+    <div class="partner_wrap">
+    <div class="con partner_text">
+        <div class="logo"><img src="http://food-factory.kr/images/main/sec03_img_02.png" alt=""></div>
+        늘 자연 그대로의 신선함을 고객에게 끊임없이 전달하겠습니다. <br>
+        신선한 과일과 채소를 간편하고 안전하게 먹을 수 있도록 푸드팩토리만의 높은 신선도 유지능력과 <br>
+        호흡유지 포장 등의 보유기술로 현 유통되는 B2C 상품의 90%가 자사상품입니다.
+    </div>
+    <div class="con partner_list">
+        <ul class="flex">
+        <li><img src="http://food-factory.kr/images/main/sec03_img_03.png" alt=""></li>
+        <li><img src="http://food-factory.kr/images/main/sec03_img_04.png" alt=""></li>
+        <li><img src="http://food-factory.kr/images/main/sec03_img_05.png" alt=""></li>
+        <li><img src="http://food-factory.kr/images/main/sec03_img_15.png" alt=""></li>
+        <li><img src="http://food-factory.kr/images/main/sec03_img_06.png" alt=""></li>
+        <li><img src="http://food-factory.kr/images/main/sec03_img_07.png" alt=""></li>
+
+        <li><img src="http://food-factory.kr/images/main/sec03_img_08.png" alt=""></li>
+        <li><img src="http://food-factory.kr/images/main/sec03_img_09.png" alt=""></li>
+        <li><img src="http://food-factory.kr/images/main/sec03_img_10.png" alt=""></li>
+        <li><img src="http://food-factory.kr/images/main/sec03_img_11.png" alt=""></li>
+        <li><img src="http://food-factory.kr/images/main/sec03_img_12.png" alt=""></li>
+        <li><img src="http://food-factory.kr/images/main/sec03_img_13.png" alt=""></li>
+        </ul>
+    </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- 푸터 -->
+
+<footer>
+<div class="wrap">
+    <div class="con flex">
+    <div class="notice flex flex-jc-b flex-ai-c">
+        <div class="title">NOTICE</div>
+        <ul class="slider-3">
+        <li> <a href="#">[푸드팩토리] 코로나19 컵과일 …</a></li>
+        </ul>
+
+        <a href="#"><img src="http://food-factory.kr/images/common/icon_arw_1.png" alt=""></a>
+    </div>
+    <div class="news flex flex-jc-b flex-ai-c">
+        <div class="title">NEWS</div>
+        <ul class="slider-3 flex flex-ai-c">
+        <li><a href="#"> [푸드팩토리] 코로나19 컵과일 …</a> </li>
+
+        <li><a href="#">SBS CNBC 생생경제 정보톡톡…</a> </li>
+        <li><a href="#"> "김천시 2020년 02월 이달의…</a> </li>
+        <li><a href="#"> " 함께사는 김천 겨울호_푸드팩토리♥</a> </li>
+
+        </ul>
+
+        <a href="#"><img src="http://food-factory.kr/images/common/icon_arw_1.png" alt=""></a>
+    </div>
+    </div>
+</div>
+
+<div class="con copy">
+    <ul class="flex">
+    <li><a href="#">회사소개</a></li>
+    <li><a href="#">개인정보처리방침</a></li>
+    <li><a href="#">이메일무단수집거부</a></li>
+    <li><a href="#">주문ERP</a></li>
+    </ul>
+    <div class="text">
+    농업회사법인 주식회사 푸드팩토리 <span>·</span> 대표이사 김경민 <span>·</span> 사업자번호 510-81-33410 <span>·</span> 경상북도 김천시 아포읍 덕계길 137 <span>·</span> TEL 054-434-3060 <span>·</span> FAX 054-437-3060
+    <br>
+    COPYRIGHT ⓒ 2019 FOODFACTORY. ALL RIGHTS RESERVED.
+    </div>
+</div>
+</footer>
+
+<!-- 플로팅 메뉴 -->
+<div id="floating">
+<ul class="flex flex-ai-c">
+    <li class="active" data-target="#main-img"><a href="#">
+        <span class="dot"></span>
+        <span>HOME</span>
+    </a></li>
+    <li data-target="#onecup_oneday"><a href="#">
+        <span class="dot"></span>
+        <span>1CUP 1DAY</span>
+
+    </a></li>
+    <li data-target="#news"><a href="#">
+        <span class="dot"></span>
+        <span>NEWS</span>
+    </a></li>
+    <li  data-target="#partner"><a href="#">
+        <span class="dot"></span>
+        <span>Partners</span>
+    </a></li>
+</ul>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
