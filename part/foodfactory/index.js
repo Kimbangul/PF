@@ -116,47 +116,8 @@ $btn.click(mbOpenClose);
 $('nav.menu > div.gnb-mb li').click(mbSubmenuOpen);
 }
 
+// fullpage
 
-// scroll
-
-var floatingMenu = $('div#floating > ul > li');
-function floatingMenuClickEvent(){
-  var scrollPosition = $($(this).attr("data-target")).offset().top;
-  console.log(scrollPosition);
-
-$("html, body").animate({scrollTop: scrollPosition}, 500);
-$(this).addClass('active').siblings('li').removeClass('active');
-}
-
-floatingMenu.click(floatingMenuClickEvent);
-
-
-
-
-
-var elementPosition = [ $('#main-img').offset().top, $('#onecup_oneday').offset().top, $('#news').offset().top, $('#partner').offset().top, $('footer').offset().top
-];
-
-
-console.log(elementPosition[2]);
-
-
-var windowHeight = $(window).height();
-
-var position = $(window).scrollTop(); 
-
-// should start at 0
-
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    if(scroll > position) {
-        console.log('scrollDown');
-       
-    } else {
-         console.log('scrollUp');         
-    }
-    position = scroll;
-});
 
 
 
