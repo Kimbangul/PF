@@ -118,7 +118,16 @@ $('nav.menu > div.gnb-mb li').click(mbSubmenuOpen);
 
 // fullpage
 
+$('#contents').fullpage({
+  //options here
+  licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+  autoScrolling: true,
+  navigation: true,
+	navigationPosition: 'right',
+	navigationTooltips: ['HOME', '1CUP 1DAY', 'NEWS', 'Partners'],
+  showActiveTooltip: true
 
+});
 
 
 headerOpenClose_init();

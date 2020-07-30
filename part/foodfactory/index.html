@@ -12,11 +12,13 @@
 <!-- 제이쿼리 불러오기 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- fullpage -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
 
 <!-- debounce  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+<!-- fullpage -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
 
 <!-- 슬릭 슬라이더 -->
 
@@ -168,8 +170,7 @@
 <!-- 콘텐츠 -->
 <section id="contents">
 <!-- 메인 이미지  -->
-<div id="main-img" class="main-img">
-
+<div id="main-img" class="main-img section">
     <ul class="slider-1">
     <li>
         <div class="main-img-dot-wrap">
@@ -261,7 +262,7 @@
 
 </div>
 <!-- 원컵 원데이   -->
-<div id="onecup_oneday" class="onecup_oneday">
+<div id="onecup_oneday" class="onecup_oneday section">
     <div class="title_wrap">
 
     <div class="title">1 CUP 1 DAY<span> : 하루 한컵</span></div>
@@ -318,7 +319,7 @@
     </div>
 </div>
 <!-- 뉴스  -->
-<div id="news" class="news">
+<div id="news" class="news section">
     <div class="news_bg">
 
     </div>
@@ -393,7 +394,7 @@
 </div>
 
 <!-- 파트너   -->
-<div id="partner" class="partner">
+<div id="partner" class="partner section">
     <div class="con img_wrap flex">
 
     <div class="img">
@@ -443,54 +444,57 @@
     </div>
 
 </div>
-</section>
 
 <!-- 푸터 -->
 
-<footer>
-<div class="wrap">
-    <div class="con flex">
-    <div class="notice flex flex-jc-b flex-ai-c">
-        <div class="title">NOTICE</div>
-        <ul class="slider-3">
-        <li> <a href="#">[푸드팩토리] 코로나19 컵과일 …</a></li>
+<footer class="section">
+    <div class="wrap">
+        <div class="con flex">
+        <div class="notice flex flex-jc-b flex-ai-c">
+            <div class="title">NOTICE</div>
+            <ul class="slider-3">
+            <li> <a href="#">[푸드팩토리] 코로나19 컵과일 …</a></li>
+            </ul>
+    
+            <a href="#"><img src="http://food-factory.kr/images/common/icon_arw_1.png" alt=""></a>
+        </div>
+        <div class="news flex flex-jc-b flex-ai-c">
+            <div class="title">NEWS</div>
+            <ul class="slider-3 flex flex-ai-c">
+            <li><a href="#"> [푸드팩토리] 코로나19 컵과일 …</a> </li>
+    
+            <li><a href="#">SBS CNBC 생생경제 정보톡톡…</a> </li>
+            <li><a href="#"> "김천시 2020년 02월 이달의…</a> </li>
+            <li><a href="#"> " 함께사는 김천 겨울호_푸드팩토리♥</a> </li>
+    
+            </ul>
+    
+            <a href="#"><img src="http://food-factory.kr/images/common/icon_arw_1.png" alt=""></a>
+        </div>
+        </div>
+    </div>
+    
+    <div class="con copy">
+        <ul class="flex">
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">이메일무단수집거부</a></li>
+        <li><a href="#">주문ERP</a></li>
         </ul>
-
-        <a href="#"><img src="http://food-factory.kr/images/common/icon_arw_1.png" alt=""></a>
+        <div class="text">
+        농업회사법인 주식회사 푸드팩토리 <span>·</span> 대표이사 김경민 <span>·</span> 사업자번호 510-81-33410 <span>·</span> 경상북도 김천시 아포읍 덕계길 137 <span>·</span> TEL 054-434-3060 <span>·</span> FAX 054-437-3060
+        <br>
+        COPYRIGHT ⓒ 2019 FOODFACTORY. ALL RIGHTS RESERVED.
+        </div>
     </div>
-    <div class="news flex flex-jc-b flex-ai-c">
-        <div class="title">NEWS</div>
-        <ul class="slider-3 flex flex-ai-c">
-        <li><a href="#"> [푸드팩토리] 코로나19 컵과일 …</a> </li>
+    </footer>
 
-        <li><a href="#">SBS CNBC 생생경제 정보톡톡…</a> </li>
-        <li><a href="#"> "김천시 2020년 02월 이달의…</a> </li>
-        <li><a href="#"> " 함께사는 김천 겨울호_푸드팩토리♥</a> </li>
+</section>
 
-        </ul>
 
-        <a href="#"><img src="http://food-factory.kr/images/common/icon_arw_1.png" alt=""></a>
-    </div>
-    </div>
-</div>
-
-<div class="con copy">
-    <ul class="flex">
-    <li><a href="#">회사소개</a></li>
-    <li><a href="#">개인정보처리방침</a></li>
-    <li><a href="#">이메일무단수집거부</a></li>
-    <li><a href="#">주문ERP</a></li>
-    </ul>
-    <div class="text">
-    농업회사법인 주식회사 푸드팩토리 <span>·</span> 대표이사 김경민 <span>·</span> 사업자번호 510-81-33410 <span>·</span> 경상북도 김천시 아포읍 덕계길 137 <span>·</span> TEL 054-434-3060 <span>·</span> FAX 054-437-3060
-    <br>
-    COPYRIGHT ⓒ 2019 FOODFACTORY. ALL RIGHTS RESERVED.
-    </div>
-</div>
-</footer>
 
 <!-- 플로팅 메뉴 -->
-<div id="floating">
+<!-- <div id="floating">
 <ul class="flex flex-ai-c">
     <li class="active" data-target="#main-img"><a href="#">
         <span class="dot"></span>
@@ -510,7 +514,7 @@
         <span>Partners</span>
     </a></li>
 </ul>
-</div>
+</div> -->
 
 <script src="index.js"></script>
 </body>
