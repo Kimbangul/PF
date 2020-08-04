@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'NEXON';
+	font-style: normal;
+	font-weight: 200;
+	src: local('NEXON Light'), local('NEXONLv1GothicLight'));
+	src: url(../fonts/NEXONLv1GothicLight.ttf) format('truetype'),
+	url(../fonts/NEXONLv1GothicLight.woff) format('woff');
+}
+@font-face {
+	font-family: 'NEXON';
+	font-style: normal;
+	font-weight: 300;
+	src: local('NEXON Regular'), local('NEXONLv1Gothic');
+	src: url(../fonts/NEXONLv1Gothic.ttf) format('truetype'),
+	url(../fonts/NEXONLv1Gothic.woff) format('woff');
+}
+@font-face {
+	font-family: 'NEXON';
+	font-style: normal;
+	font-weight: 700;
+	src: local('NEXON Medium'), local('NEXONLv1GothicBold');
+	src: url(../fonts/NEXONLv1GothicBold.ttf) format('truetype'),
+	url(../fonts/NEXONLv1GothicBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'NotoSerif';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Noto Serif Medium'), local('NotoSerifKR-Medium');
+	src: url(../fonts/NotoSerifKR-Medium.ttf) format('truetype'),
+	url(../fonts/NotoSerifKR-Medium.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'NotoSerif';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Noto Serif semiBold'), local('NotoSerifKR-semiBold');
+	src: url(../fonts/NotoSerifKR-semiBold.ttf) format('truetype'),
+	url(../fonts/NotoSerifKR-semiBold.woff) format('woff');
+}
+
+
+/* 노말라이즈 */
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    box-sizing: border-box;
+}
+
+/* 라이브러리 */
+
+.con{
+    width: 100%;
+}
+
+.con-max-width{
+    max-width: 1400px;
+    width: 100%;
+}
+
+.block{
+    display: block;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.light{
+    font-weight: light;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-ai-c{
+    align-items: center;
+}
+
+.flex-jc-c{
+    justify-content: center;
+}
+
+.flex-jc-a{
+    justify-content: space-around;
+}
+
+.flex-jc-b{
+    justify-content: space-between;
+}
+
+.flex-jc-e{
+    justify-content: flex-end;
+}
+
+.flex-1-0-0{
+    flex: 1 0 0;
+}
+
+.img-box{
+
+}
+
+.img-box img{
+    width: 100%;
+}
+
+.border-red{
+    border: 3px solid red;
+}
+
+.nexon{
+    font-family: 'NEXON', dotum, Arial, sans-serif;
+}
+
+
+
+
+
+
+/* 커스텀 */
+
+html,body{
+    overflow-x: hidden;
+}
+
+a,img{
+    display: block;
+}
