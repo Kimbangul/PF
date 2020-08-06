@@ -1,47 +1,6 @@
 @charset "utf-8";
 
-@font-face {
-	font-family: 'NEXON';
-	font-style: normal;
-	font-weight: 200;
-	src: local('NEXON Light'), local('NEXONLv1GothicLight'));
-	src: url(../fonts/NEXONLv1GothicLight.ttf) format('truetype'),
-	url(../fonts/NEXONLv1GothicLight.woff) format('woff');
-}
-@font-face {
-	font-family: 'NEXON';
-	font-style: normal;
-	font-weight: 300;
-	src: local('NEXON Regular'), local('NEXONLv1Gothic');
-	src: url(../fonts/NEXONLv1Gothic.ttf) format('truetype'),
-	url(../fonts/NEXONLv1Gothic.woff) format('woff');
-}
-@font-face {
-	font-family: 'NEXON';
-	font-style: normal;
-	font-weight: 700;
-	src: local('NEXON Medium'), local('NEXONLv1GothicBold');
-	src: url(../fonts/NEXONLv1GothicBold.ttf) format('truetype'),
-	url(../fonts/NEXONLv1GothicBold.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'NotoSerif';
-	font-style: normal;
-	font-weight: 500;
-	src: local('Noto Serif Medium'), local('NotoSerifKR-Medium');
-	src: url(../fonts/NotoSerifKR-Medium.ttf) format('truetype'),
-	url(../fonts/NotoSerifKR-Medium.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'NotoSerif';
-	font-style: normal;
-	font-weight: 600;
-	src: local('Noto Serif semiBold'), local('NotoSerifKR-semiBold');
-	src: url(../fonts/NotoSerifKR-semiBold.ttf) format('truetype'),
-	url(../fonts/NotoSerifKR-semiBold.woff) format('woff');
-}
+@font-face { font-family: 'NEXON Lv1 Gothic OTF'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 
 /* 노말라이즈 */
@@ -123,7 +82,7 @@
 }
 
 .nexon{
-    font-family: 'NEXON', dotum, Arial, sans-serif;
+    font-family: 'NEXON Lv1 Gothic OTF', dotum, Arial, sans-serif;
 }
 
 
@@ -134,9 +93,45 @@
 /* 커스텀 */
 
 html,body{
-    overflow-x: hidden;
+	overflow-x: hidden;
+	font-size: 10px;
 }
 
 a,img{
     display: block;
 }
+
+
+/*  헤더 시작 */
+
+header {
+	padding: 0 40px;
+}
+
+
+header > nav > ul.menu > li > a{
+	padding: 35px 40px;
+	font-size: 1.8rem;
+	white-space: nowrap;
+}
+
+
+header > nav > div.right-menu > ul > li > a{
+	font-size: 1.4rem;
+	padding: 0 5px;
+	color: rgba(150,150,150);
+}
+
+header > nav > div.right-menu > div.apply > a{
+	padding: 15px 25px;
+	font-size: 1.6rem;
+	font-weight: 900;
+	background-color: #4b89dc;
+	color: #fff;
+	border-radius: 45px;
+	white-space: nowrap;
+}
+
+
+
+/* 헤더 끝 */
