@@ -116,24 +116,36 @@ a,img{
 
 /*  헤더 시작 */
 
-header {
-    padding: 0 40px;
-    position: fixed;
+.header-wrap{
     width: 100%;
+    height: 100px;
+    max-height: 100px;
+    overflow: hidden;
+    position: fixed;
+    transition: height 0.1s, max-height 0.1s;
+    z-index: 99;
+}
 
+.header-wrap.on{
+    height: 170px;
+  max-height: 200px;
+}
+
+header {
+    padding: 0 70px;
+    position: relative;
+    width: 100%;
     background-color:#fff;
     
 }
 
-header.on{
 
-}
 
 header::after{
     display: block;
     content: " ";
     width: 100%;
-    height: 0;
+    height: 70px;
     transition: height 0.5s;
     background-color: #4b89dc;
     position: absolute;
@@ -142,41 +154,38 @@ header::after{
     z-index: 10;
 }
 
-header.on::after{
- 
-    height: 70px;
-
-}
 
 
-header > nav{
+
+
+header > nav.pc{
     width: 100%;
     height: 100px;
 }
 
-header > nav > ul.menu > li{
+header > nav.pc > ul.menu > li{
     position: relative;
 }
 
 
-header > nav > ul.menu > li > a{
+header > nav.pc > ul.menu > li > a{
     padding: 0px 50px;
 	font-size: 1.8rem;
 	white-space: nowrap;
 }
 
-header > nav > div.right-menu > ul{
+header > nav.pc > div.right-menu > ul{
     margin-right: 20px;
 }
 
 
-header > nav > div.right-menu > ul > li > a{
+header > nav.pc > div.right-menu > ul > li > a{
     font-size: 1.4rem;
 
 	color: rgba(150,150,150);
 }
 
-header > nav > div.right-menu > ul > li:first-child::after{
+header > nav.pc > div.right-menu > ul > li:first-child::after{
     content: "";
     margin: 0 10px;
     display: block;
@@ -185,9 +194,9 @@ header > nav > div.right-menu > ul > li:first-child::after{
     height: 8px;
 }
 
-header > nav > div.right-menu > div.apply > a{
-	padding: 15px 25px;
-	font-size: 1.6rem;
+header > nav.pc > div.right-menu > div.apply > a{
+	padding: 20px 65px;
+	font-size: 2rem;
 	font-weight: 900;
 	background-color: #4b89dc;
 	color: #fff;
@@ -195,23 +204,198 @@ header > nav > div.right-menu > div.apply > a{
 	white-space: nowrap;
 }
 
-header > nav > ul.menu ul.submenu{
+header > nav.pc > ul.menu ul.submenu{
     position: absolute;   
     height: 70px;
     z-index: 15;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    display: none;
     font-size: 1.6rem;
 
 }
 
-header > nav > ul.menu ul > li > a{
+header > nav.pc > ul.menu ul > li > a{
     color: #fff;
     padding: 0px 40px;
     white-space: nowrap;
 }
 
+/* 모바일 */
+
+header > nav.mb{
+    display: none;
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+header > nav.mb > div.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header > nav.mb > div.logo > a > img{
+    width: 88px;
+}
+
+header > nav.mb > div.menu-btn{
+    width: 50px;
+    height: 50px;
+
+    padding: 18px 15px;
+
+}
+
+header > nav.mb > div.menu-btn > .menu-btn-bar-wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+header > nav.mb > div.menu-btn > .menu-btn-bar-wrap > span{
+    position: absolute;
+    left: 50%;
+    top:  0;
+  
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color:#666;
+    
+}
+
+
+header > nav.mb > div.menu-btn > .menu-btn-bar-wrap > span:nth-child(2){
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color:#000;
+}
+
+header > nav.mb > div.menu-btn > .menu-btn-bar-wrap > span:last-child{
+    top: unset;
+    bottom: 0;
+}
+
+header > nav.mb > div.gnb{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+header > nav.mb > div.gnb > div.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background: #fff;
+}
+
+header > nav.mb > div.gnb > div.menu > div.menu-top{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    background-color: #4b89dc;
+    padding: 0 20px;
+}
+
+header > nav.mb > div.gnb > div.menu > div.menu-top > div.logo img{
+    width: 72px;
+}
+
+header > nav.mb > div.gnb > div.menu > div.menu-top > div.close-btn{
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    transform: translateX(13px);
+}
+header > nav.mb > div.gnb > div.menu > div.menu-top > div.close-btn > div.close-btn-bar-wrap{
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+}
+
+header > nav.mb > div.gnb > div.menu > div.menu-top > div.close-btn span{
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+header > nav.mb > div.gnb > div.menu > div.menu-top > div.close-btn span:last-child{
+    transform: translateY(-50%) rotate(-45deg);
+}
 
 /* 헤더 끝 */
+
+
+/* 미디어 쿼리 */
+
+
+@media (max-width: 1700px){
+ 
+    header > nav.pc > div.right-menu > div.apply > a{
+        padding: 15px 30px;
+        font-size: 1.7rem;
+    }
+
+}
+
+@media (max-width: 1500px){
+    header {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 1350px){
+ 
+    header > nav.pc > div.right-menu > div.apply > a{
+        padding: 10px 15px;
+        font-size: 1.7rem;
+    }
+
+    header > nav.pc > ul.menu > li > a{
+        padding: 0 24px;
+    }
+
+}
+
+@media (max-width: 750px){
+
+    .header-wrap{
+        height: 50px;
+        max-height: 50px;
+    }
+    
+    .header-wrap.on{
+        height: 170px;
+      max-height: 200px;
+    }
+    
+    header {
+        padding: 0px;        
+    }
+
+    header::after{
+       display: none;
+    }
+
+    header > nav.pc{
+        display: none;
+    }
+
+    header > nav.mb{
+        display: block;
+    }
+
+}
