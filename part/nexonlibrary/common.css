@@ -104,7 +104,7 @@
 html,body{
 	overflow-x: hidden;
     font-size: 10px;
-    
+    color: #666;
     /* test */
     background-color: beige;
 }
@@ -136,7 +136,7 @@ header {
     position: relative;
     width: 100%;
     background-color:#fff;
-    
+    color: #2e2e2e;
 }
 
 
@@ -244,9 +244,9 @@ header > nav.mb > div.logo > a > img{
 header > nav.mb > div.menu-btn{
     width: 50px;
     height: 50px;
-
+    
     padding: 18px 15px;
-
+    cursor: pointer;
 }
 
 header > nav.mb > div.menu-btn > .menu-btn-bar-wrap{
@@ -283,19 +283,32 @@ header > nav.mb > div.gnb{
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.65);
+    background-color: rgba(0,0,0,0);
     z-index: 100;
     top: 0;
-    left: 0;
+    left: 0; 
+   
+    visibility: hidden;
+    transition: background-color 0.3s, visibility 0s 0.3s;
+}
+header > nav.mb > div.gnb.on{
+   visibility: visible;
+   background-color: rgba(0,0,0,0.65);
+   transition: background-color 0.3s, visibility 0.3s 0s;
 }
 
 header > nav.mb > div.gnb > div.menu{
     position: absolute;
     top: 0;
-    left: 0;
+    left: -80%;
     width: 80%;
     height: 100%;
     background: #fff;
+    transition: left 0.3s;
+}
+
+header > nav.mb > div.gnb.on > div.menu{
+    left: 0;
 }
 
 header > nav.mb > div.gnb > div.menu > div.menu-top{
@@ -304,6 +317,7 @@ header > nav.mb > div.gnb > div.menu > div.menu-top{
     overflow: hidden;
     background-color: #4b89dc;
     padding: 0 20px;
+    margin-bottom: 25px;
 }
 
 header > nav.mb > div.gnb > div.menu > div.menu-top > div.logo img{
@@ -315,6 +329,7 @@ header > nav.mb > div.gnb > div.menu > div.menu-top > div.close-btn{
     height: 50px;
     padding: 13px;
     transform: translateX(13px);
+    cursor: pointer;
 }
 header > nav.mb > div.gnb > div.menu > div.menu-top > div.close-btn > div.close-btn-bar-wrap{
     width: 100%;
@@ -334,6 +349,24 @@ header > nav.mb > div.gnb > div.menu > div.menu-top > div.close-btn span{
 
 header > nav.mb > div.gnb > div.menu > div.menu-top > div.close-btn span:last-child{
     transform: translateY(-50%) rotate(-45deg);
+}
+
+header > nav.mb > div.gnb > div.menu > ul.menu-list > li > a{
+    font-size: 1.5rem;
+    padding: 15px 0;
+    padding-left: 25px;
+    font-weight: bold;
+}
+
+header > nav.mb > div.gnb > div.menu > ul.menu-list ul.submenu{
+    margin-top: 5px;
+}
+header > nav.mb > div.gnb > div.menu > ul.menu-list ul.submenu > li > a{
+    color: #999999;
+    font-weight: light;
+    font-size: 1.3rem;
+    padding: 10px 0;
+    padding-left: 25px;
 }
 
 /* 헤더 끝 */
