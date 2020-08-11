@@ -477,6 +477,74 @@ section#contents div.main ul.slider-1 li{
     transform: translateX(170%) translateY(25%);
 }
 
+.slider-1 .slick-slide{
+    position: relative;
+}
+
+.slider-1 li.bg:nth-child(2) div.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 2.9rem;
+    white-space: nowrap;
+}
+
+.slider-1 li.bg:nth-child(2) div.text-box> span{
+    display: inline-block;
+    font-size: 6rem;
+    line-height: 8rem;
+    margin-bottom: 5rem;
+}
+
+.slider-1 li.bg:nth-child(2) div.text-box > a{
+    display: inline-flex;
+    font-size: 2.4rem;
+    padding: 35px 45px;
+    margin-top: 5rem;
+    background-color: #4b89dc;
+}
+
+.slider-1 li.bg:nth-child(2) div.text-box> a > svg{
+    margin-left: 7rem;
+}
+
+.slider-1 li.bg a.video{
+    width: 100%;
+    height: 100%;
+    background: url(https://nexonlibrary.com/front/images/bg_main_banner2_1.jpg) center no-repeat;
+}
+.slider-1 li.bg a.video > svg{
+    position: absolute;
+    color: rgba(255,255,255,0.3);
+    font-size: 9.8rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+}
+
+.slider-1 li.bg:nth-child(3) div.text-box{
+    position: absolute;
+    top: 20%;
+    left: 68%;
+    font-size: 2.5rem;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.slider-1 li.bg:nth-child(3) div.text-box > .line{
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 1.5rem;
+}
+
+.slider-1 li.bg:nth-child(3) div.text-box > .line:nth-of-type(2){
+    margin-left: 8rem;
+}
 
 
 
@@ -517,6 +585,9 @@ section#contents div.main ul.slider-1 li{
 
 @media (max-width: 750px){
 
+
+    /* 헤더 시작 */
+
     .header-wrap{
         height: 50px;
         max-height: 50px;
@@ -543,6 +614,10 @@ section#contents div.main ul.slider-1 li{
         display: block;
     }
 
+    /* 헤더 끝 */
+
+    /* 콘텐트 시작 */
+    /* 메인 슬라이드 영역 시작 */
     section#contents div.main{
         margin-top: 50px;
         
@@ -577,4 +652,63 @@ section#contents div.main ul.slider-1 li{
         border-radius: 5px;
     }
 
+
+
+    .slider-1 li.bg:nth-child(2) div.text-box{
+        font-size: 1.2rem; 
+        line-height: 1.9rem;     
+    }
+    
+    .slider-1 li.bg:nth-child(2) div.text-box > span{
+        display: inline-block;
+        font-size: 2.2rem;
+        line-height: 3rem;
+        margin-bottom: 1.8rem;
+    }
+    
+    .slider-1 li.bg:nth-child(2) div.text-box > a{
+        font-size: 1.2rem;
+        padding: 15px 25px;
+        margin-top: 1.8rem;
+        background-color: #4b89dc;
+    }
+
+    
+.slider-1 li.bg:nth-child(2) div.text-box> a > svg{
+    margin-left: 3.5rem;
+}
+
+.slider-1 li.bg a.video{
+    width: 320px;
+    height: 180px;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.slider-1 li.bg:nth-child(3) div.text-box {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;    
+}
+.slider-1 li.bg:nth-child(3) div.text-box > .line{
+    padding-bottom: 3px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 0.7rem;
+}
+
+.slider-1 li.bg:nth-child(3) div.text-box > .line:nth-of-type(2){
+    margin-left: 3.5rem;
+}
+
+.slider-1 li.bg a.video > svg{
+    font-size: 5rem;
+}
+/* 메인 슬라이드 영역 끝 */
+
+
+    /* 콘텐트 끝 */
 }
