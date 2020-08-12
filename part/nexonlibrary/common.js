@@ -58,11 +58,28 @@ $('.slider-1').slick({
 	nextArrow : "<button type='button' class='slick-next'>Next</button>"		// 다음 화살표 모양 설정
  });
 
+ $('.slider-2').slick({
+    slide: 'li',
+    dots : false,
+    speed: 300,
+    infinite : false,
+    autoplay: false,
+    pauseOnHover : false,
+    arrows: false,
+    draggable: false,
+    arrows: true,
+    prevArrow : $('.slider-2 .prev-arrow'),		// 이전 화살표 모양 설정
+	nextArrow : $('.slider-2 .next-arrow')		// 다음 화살표 모양 설정
+ });
+
+
+
  $('.slider-3').slick({
     slide: 'li',
     dots : true,
     infinite : false,
     autoplay: false,
+   
     pauseOnHover : false,
     arrows: false,
     fade: true,
