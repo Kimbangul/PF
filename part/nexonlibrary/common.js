@@ -58,6 +58,20 @@ $('.slider-1').slick({
 	nextArrow : "<button type='button' class='slick-next'>Next</button>"		// 다음 화살표 모양 설정
  });
 
+ $('.slider-3').slick({
+    slide: 'li',
+    dots : true,
+    infinite : false,
+    autoplay: false,
+    pauseOnHover : false,
+    arrows: false,
+    fade: true,
+    draggable: false,
+    customPaging: function (slider, i) {
+        var thumb = $(slider.$slides[i]).data('thumb');
+        return '<div class="thumb"><img src="'+thumb+'"></div>';
+    } 
+ });
 
 
 
