@@ -825,6 +825,37 @@ div.program .slider-2 div.mb {
 
 
     /* 프로그램 끝 */
+    /* 응원하기 영역 시작 */
+
+    div.cheer{
+        margin-top: 150px;
+        margin-bottom: 150px;
+        position: relative;
+    }
+
+    div.cheer > div.row > p{
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 500;
+        font-size: 4rem;
+        font-style: italic;
+        color: #333333;
+        margin-bottom: 50px;
+    }
+
+    div.cheer > div.row > div.btn{
+        display: inline-block;
+        background-color: #4b89dc;
+        color: #fff;
+        padding: 35px 50px;
+        font-size: 2.3rem;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    }
+
+    div.cheer > div.row > div.btn > a> span{
+        margin-left: 90px;
+    }
+
+    /* 응원하기 영역 끝 */
     /* 콘텐츠 영역 끝 */
 
 
@@ -1029,7 +1060,7 @@ div.program .slider-2 div.mb {
         }
 
         div.introduction>div.row:first-of-type>div.cell.text-box>p:nth-of-type(1) {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-family: 'NEXON Lv1 Gothic OTF Light', dotum, Arial, sans-serif;
             font-weight: bold;
             line-height: 2.5rem;
@@ -1157,5 +1188,31 @@ div.program .slider-2 div.mb {
 
 
         /* 프로그램 끝 */
+        /* 응원하기 시작 */
+        div.cheer{
+            margin-top: 50px;
+            margin-bottom: 50px;     
+            padding: 0 15px;       
+        }
+    
+        div.cheer > div.row > p{
+            font-size: 2rem;
+
+            margin-bottom: 20px;
+        }
+    
+        div.cheer > div.row > div.btn{
+            display: inline-block;
+            background-color: #4b89dc;
+            color: #fff;
+            padding: 17.5px 25px;
+            font-size: 1.3rem;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+        }
+    
+        div.cheer > div.row > div.btn > a> span{
+            margin-left: 45px;
+        }
+        /* 응원하기 끝 */
         /* 콘텐트 끝 */
     }
