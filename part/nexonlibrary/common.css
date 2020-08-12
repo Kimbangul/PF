@@ -154,6 +154,7 @@ body {
     overflow-x: hidden;
     font-size: 10px;
     color: #666;
+    min-width: 335px;
 
 }
 
@@ -856,6 +857,74 @@ div.program .slider-2 div.mb {
     }
 
     /* 응원하기 영역 끝 */
+    /* 스토리 영역 시작 */
+    div.story{
+        background-color: #f5f5f5;        
+        padding: 150px 0;
+    }
+
+    div.story > div.row{
+        position: relative;
+        width: 1172px;
+    }
+
+    div.story > div.row > div.text-box{
+        order: 1;
+        color:#2e2e2e;
+        flex-grow: 1;
+        margin-left: 50px;
+        
+    }
+
+    div.story > div.row > div.text-box >  h2.title{
+        font-size: 3.4rem;
+        margin: 30px 0;
+     
+    }
+    div.story > div.row > div.text-box >  h2.title > a{
+        font-size: 1.6rem;
+    }
+
+    div.story > div.row > div.text-box > p{
+        
+        font-size: 4.2rem;
+    }
+
+    div.story > div.row > div.text-box > p > span{
+        color: #4b89dc;
+    }
+
+    div.story > div.row > div.text-box-2{
+        position: absolute;
+        width: 570px;
+        right: 0;
+        bottom: -60px;
+        padding: 40px 50px;
+        background-color: #fff;
+        
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    }
+
+    div.story > div.row > div.text-box-2 > h3.title{
+        color: #2e2e2e;
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+    }
+    div.story > div.row > div.text-box-2 > p{
+        color: #999;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        margin-bottom: 20px;
+    }
+
+    div.story > div.row > div.text-box-2 > a{
+        display: inline-block;
+        font-size: 1.6rem;
+        color: #2e2e2e;
+        font-weight: bold;
+    }
+
+    /* 스토리 영역 끝 */
     /* 콘텐츠 영역 끝 */
 
 
@@ -1214,5 +1283,66 @@ div.program .slider-2 div.mb {
             margin-left: 45px;
         }
         /* 응원하기 끝 */
+        /* 스토리 영역 시작 */
+            div.story{
+                padding: 35px 15px;
+            }
+
+            div.story > div.row{
+                width: 100%;
+                flex-direction: column;
+            }
+
+
+            div.story > div.row > div.text-box{
+                order: 0;
+                margin-left: 0;
+            }
+
+            div.story > div.row > div.text-box > h2.title{
+                font-size: 2rem;
+                margin: 0;
+                margin-bottom: 15px;
+            }
+
+            div.story > div.row > div.text-box > h2.title > a{
+                font-size: 1.1rem;
+            }
+
+            div.story > div.row > div.text-box > p{
+                font-size: 2.1rem;
+                margin-bottom: 15px;
+            }
+
+            
+
+            div.story > div.row > div.text-box-2 {
+                position: static;
+                width: 100%;
+                padding: 20px;
+            }
+
+            div.story > div.row > div.text-box-2 > h3.title{
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+            }
+
+            div.story > div.row > div.text-box-2 > p{
+                font-size: 1.1rem;
+                line-height: 2.1rem;
+                margin-bottom: 10px;
+            }
+
+            div.story > div.row > div.text-box-2 > a{
+                font-size: 1.1rem;
+            }
+
+        /* 스토리 영역 끝 */
         /* 콘텐트 끝 */
     }
+
+  @media(max-width:335px){
+      html,body{
+          overflow-x: auto;
+      }
+  }
