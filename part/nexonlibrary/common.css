@@ -88,7 +88,6 @@
     flex: 1 0 0;
 }
 
-.img-box {}
 
 .img-box img {
     width: 100%;
@@ -151,7 +150,7 @@
 
 html,
 body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-size: 10px;
     color: #666;
     min-width: 335px;
@@ -170,6 +169,8 @@ img {
     width: 100%;
     height: 100px;
     max-height: 100px;
+    top: 0;
+    left: 0;
     overflow: hidden;
     position: fixed;
     transition: height 0.1s, max-height 0.1s;
@@ -430,6 +431,11 @@ header>nav.mb>div.gnb>div.menu>ul.menu-list ul.submenu>li>a {
 /* 헤더 끝 */
 
 /*  콘텐츠 영역 시작 */
+section#contents{
+    min-width: 1172px;
+}
+
+
 /* 메인 슬라이드 영역 시작 */
 section#contents div.main {
     margin-top: 100px;
@@ -673,6 +679,11 @@ div.introduction>ul.img-list>li>img {
 /* 소개 끝 */
 /* 프로그램 시작 */
 
+div.program-wrap{
+    width: 100%;
+    overflow: hidden;
+}
+
 div.program {
     position: relative;
 }
@@ -758,6 +769,11 @@ div.program div.right .img-box ul li.slick-slide .desc>p {
 
 div.program div.right .img-box img {
     width: 100%;
+}
+
+.slider-3 .slick-track{
+    width: 100%;
+    height: 100%;
 }
 
 .slider-3 .slick-list {
@@ -925,6 +941,54 @@ div.program .slider-2 div.mb {
     }
 
     /* 스토리 영역 끝 */
+    /* 공지사항 시작 */
+
+    div.notice{
+        padding: 50px 0;
+    }
+
+    div.notice > div.row{
+        color: #2e2e2e;
+    }
+
+    div.notice > div.row > .title{
+        font-size: 3.4rem;
+       
+    }
+
+    div.notice > div.row > a{
+        font-size: 1.6rem;
+
+    }
+
+    div.notice > ul{
+        padding: 50px 0;
+        flex-wrap: wrap;
+    }
+
+    div.notice > ul > li{
+        font-size: 2.4rem;
+        color: #2e2e2e;
+        width:25%;
+        padding-right: 2%; 
+        margin-bottom: 15px;    
+    }
+
+    div.notice > ul > li .title{
+        padding-bottom: 15px;
+        border-bottom: 3px solid #2e2e2e;
+        height: 82px;
+        text-overflow: ellipsis;
+    }
+
+    div.notice > ul > li span{
+        display: block;
+        font-size: 1.6rem;
+        color: #999999;
+        padding-top: 15px;
+    }
+
+    /* 공지사항 끝 */
     /* 콘텐츠 영역 끝 */
 
 
@@ -989,6 +1053,15 @@ div.program .slider-2 div.mb {
 
     }
 
+    @media(min-width:751px){
+        
+div.program div.right .slider-3 {
+   
+    width: 1145px;
+ 
+}
+    }
+
     @media (max-width: 750px) {
 
         .pc {
@@ -1023,6 +1096,11 @@ div.program .slider-2 div.mb {
         /* 헤더 끝 */
 
         /* 콘텐트 시작 */
+
+        section#contents{
+            min-width: auto;
+            overflow-x: hidden;
+        }
         /* 메인 슬라이드 영역 시작 */
         section#contents div.main {
             margin-top: 50px;
@@ -1338,6 +1416,49 @@ div.program .slider-2 div.mb {
             }
 
         /* 스토리 영역 끝 */
+        /* 공지사항 시작 */
+
+        div.notice{
+            
+            padding: 30px 15px;
+        }
+
+        div.notice > div.row > .title{
+            font-size: 2rem;
+        }
+
+        div.notice > div.row > a{
+            font-size: 1.1rem;
+        }
+
+        div.notice > ul > li{
+            font-size: 2.4rem;
+            width:50%;
+            padding-right: 2%; 
+            margin-bottom: 15px;    
+        }
+
+        div.notice > ul > li:nth-child(2n){
+            padding-right: 0;
+            padding-left: 2%;
+        }
+
+        div.notice > ul > li{
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        div.notice > ul > li .title{
+            border-bottom: 2px solid #2e2e2e;
+            height: 40px;
+            text-overflow: ellipsis;
+        }
+
+        div.notice > ul > li span{
+            font-size: 1.1rem;
+            padding-top: 10px;
+        }
+        /* 공지사항 끝 */
         /* 콘텐트 끝 */
     }
 
