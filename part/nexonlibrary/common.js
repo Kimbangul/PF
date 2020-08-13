@@ -46,6 +46,8 @@ function mbGnb_init(){
 }
 
 // slick slide
+function slickSlide_init(){
+    
 $('.slider-1').slick({
     slide: 'li',
     dots : true,
@@ -90,10 +92,47 @@ $('.slider-1').slick({
     } 
  });
 
+}
+
+function popup_init(){
+   var videoStartBtn = $('.slider-1 li.bg a.video');
+var videoCloseBtn = $('div#popup > .popup-body div.close-btn');
+
+videoStartBtn.click(function(){
+    $('#popup').addClass('active');
+    ytbPlayer();
+});
+
+
+videoCloseBtn.click(function(){
+    $('#popup').removeClass('active');
+    ytbPlayer();
+}); 
+
+function ytbPlayer(){
+    if ($('#popup').hasClass('active')){
+        $('#popup > .popup-body').append('<iframe id="ytb-video" src="https://www.youtube.com/embed/2CD7yYaOI7c?autoplay=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+    }
+    else{
+        $('#ytb-video').remove();
+    }
+}
+
+
+
+
+}
+
+
+
+
+
 
 
 pcGnb_init();
 mbGnb_init();
+slickSlide_init();
+popup_init();
 
 
 

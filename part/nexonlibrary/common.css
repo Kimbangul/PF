@@ -381,7 +381,7 @@ header>nav.mb>div.gnb>div.menu>div.menu-top>div.logo img {
     width: 72px;
 }
 
-header>nav.mb>div.gnb>div.menu>div.menu-top>div.close-btn {
+div.close-btn {
     width: 50px;
     height: 50px;
     padding: 13px;
@@ -389,14 +389,14 @@ header>nav.mb>div.gnb>div.menu>div.menu-top>div.close-btn {
     cursor: pointer;
 }
 
-header>nav.mb>div.gnb>div.menu>div.menu-top>div.close-btn>div.close-btn-bar-wrap {
+div.close-btn>div.close-btn-bar-wrap {
     width: 100%;
     height: 100%;
 
     position: relative;
 }
 
-header>nav.mb>div.gnb>div.menu>div.menu-top>div.close-btn span {
+div.close-btn span {
     width: 100%;
     height: 1px;
     background-color: #fff;
@@ -405,7 +405,7 @@ header>nav.mb>div.gnb>div.menu>div.menu-top>div.close-btn span {
     transform: translateY(-50%) rotate(45deg);
 }
 
-header>nav.mb>div.gnb>div.menu>div.menu-top>div.close-btn span:last-child {
+div.close-btn span:last-child {
     transform: translateY(-50%) rotate(-45deg);
 }
 
@@ -1032,8 +1032,62 @@ div.program .slider-2 div.mb {
     }
 
     /* 푸터 끝 */
+    /* 팝업 시작 */
+        div#popup{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility 0.3s 0s, opacity 0.3s;
+        }
 
+        div#popup.active{
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s 0s, opacity 0.3s;
+        }
 
+        div#popup > .popup-body{
+            position: relative;
+            width: 1024px;
+            height: calc(1024px  *  56.25 * 0.01);     
+                       
+            /* transform: translateY(-35px); */
+            
+        }
+
+        div#popup > .popup-body #ytb-video{
+            width: 100%;
+            height: 100%;
+        }
+
+        div#popup > .popup-body  div.close-btn-wrap{
+            bottom: 100%;
+            right: 0;
+            position: absolute;
+        }
+
+        div#popup > .popup-body  div.close-btn{
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            position: relative;
+            transform: none;
+            margin-bottom: 7px;
+            margin-left: auto;
+            margin-right: unset;
+        }
+
+        div#popup > .popup-body  div.close-btn span{
+            height: 2px;
+        }
+
+    /* 팝업 끝 */
     /* 미디어 쿼리 */
 
 
@@ -1536,6 +1590,20 @@ div.program div.right .slider-3 {
             height: 30px;
         }
         /* 푸터 끝 */
+        /* 팝업 시작 */
+        
+        div#popup > .popup-body{
+            position: relative;
+            width: 320px;
+            height: calc(320px  *  56.25 * 0.01);   
+          }
+
+          div#popup > .popup-body div.close-btn{
+            width: 25px;
+            height: 25px;
+          }
+
+        /* 팝업 끝 */
         /* 콘텐트 끝 */
     }
 
