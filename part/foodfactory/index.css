@@ -1010,6 +1010,7 @@ margin: 0 auto;
 footer  .copy > ul{
 margin-bottom: 17px;
 flex-wrap: wrap;
+font-size: 1rem;
 }
 
 footer  .copy > ul > li { 
@@ -1042,11 +1043,12 @@ border-right: none;
 }
 
 footer  .copy > .text{
-font-weight: 200;
+font-weight: 300;
 word-break: keep-all;
-font-size: 0.95rem;
-line-height: 1.8rem;
+font-size: 0.9rem;
+line-height: 1.8em;
 transition: font-size 0.5s, line-height 0.5s;
+ 
 }
 
 footer  .copy > .text > span{
@@ -1136,7 +1138,7 @@ section#contents > .partner  .partner_text > div.logo > img{
 height: 90px;
 }
 
-section#contents > .partner > .img_wrap .img_title{
+section#contents > .partner .img_wrap .img_title{
 border: 7px solid white;
 font-size: 1.3rem;
 }
@@ -1269,7 +1271,7 @@ section#contents > .onecup_oneday .img_box > div.img_title{
 section#contents > .partner  .partner_text > div.logo > img{
 height: 70px;
 }
-section#contents > .partner > .img_wrap .img_title{
+section#contents > .partner .img_wrap .img_title{
 font-size: 1.1rem;
 border: 6px solid white;
 }
@@ -1328,11 +1330,17 @@ footer .slider-3 li.slick-slide a{
 font-size: 1rem;
 }
 
+footer  .copy > ul{
+    font-size: 0.9rem;
+
+    }
+    footer .copy > .text{
+        font-size: 0.8rem;
+        line-height: 1.6em;
+    }
 
 
-footer > .copy > ul > li {   
-font-size: 0.9rem;
-}
+
 
 footer > .copy > ul > li::after{
 margin: 0 13px;
@@ -1362,6 +1370,15 @@ section#contents > .news .news_wrap .news_box .text > span{
 
 }
 
+@media (max-width: 650px){
+    footer .copy > ul{
+        justify-content: center;
+    }
+    footer .copy > .text{
+        text-align: center;
+    }
+}
+
 @media (max-width: 550px){
 .title_wrap{
 padding-top: 11vh;
@@ -1369,12 +1386,14 @@ padding-bottom: 4vh;
 }
 section#contents > .onecup_oneday .img_box > div.img_title {
     font-size: 1.7rem;
+    line-height: 2.1rem;
     white-space: normal;
 }
 
 section#contents > .news .news_wrap .news_box .img{
     max-height: 220px;
 }
+
 
 }
 
@@ -1396,6 +1415,11 @@ font-size: 1.5rem;
 font-size: 0.85rem;
 }
 
+section#contents > .onecup_oneday .img_box > div.img_title{
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+}
+
 footer div.notice > .title,   footer div.news > .title{    
 font-size: 0.8rem;
 }
@@ -1403,6 +1427,16 @@ font-size: 0.8rem;
 footer .slider-3 li.slick-slide a{
 font-size: 0.8rem;
 }
+
+footer  .copy > ul{
+    font-size: 0.8rem;
+
+    }
+    footer .copy > .text{
+        font-size: 0.85rem;
+    }
+
+
 
 }
 
